@@ -22,6 +22,54 @@
 
 */
 
+
+/* ====================================================
+   Theme Modifications
+   ==================================================== */
+
+.top-bar {
+  position: absolute;
+  width: 100%;
+  background: #111;
+}
+
+.top-bar-content {
+  float: left;
+  margin-left: 1.2em;
+}
+
+.nav-right {
+  position: absolute;
+  float: right;
+  margin: 0.6em;
+  margin-right: 1.2em;
+}
+
+.header-cover {
+  width:100%;
+  height:100%;
+  margin-top: 60px;
+  background: #222 no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+.page-title a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.post-title a {
+  color: #000;
+}
+
+.page-title a:hover, .post-title a:hover {
+  color: #e91e63;
+}
+
+/* ==================================================== */
+
 /* ==========================================================================
    0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
@@ -591,8 +639,8 @@ body.nav-opened .site-wrapper {
 
 .main-nav {
     position: relative;
-    padding: 35px 40px;
-    margin: 0 0 30px 0;
+    /*padding: 35px 40px;*/
+    /*margin: 0 0 30px 0;*/
 }
 
 .main-nav a {
@@ -937,8 +985,9 @@ body.nav-opened .nav {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
-    margin: 10px 0 10px 0;
-    font-size: 3rem;
+    margin: 0;
+    padding: 0.6em;
+    font-size: 2.5rem;
     letter-spacing: -1px;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
@@ -1749,7 +1798,7 @@ body:not(.post-template) .post-title {
         height: auto;
         min-height: 240px;
         height: 60vh;
-        padding: 15% 0;
+        padding: 0 0;
     }
 
     .scroll-down,
@@ -1765,7 +1814,6 @@ body:not(.post-template) .post-title {
     }
 
     .page-title {
-        font-size: 4rem;
         letter-spacing: -1px;
     }
 
@@ -1903,11 +1951,6 @@ body:not(.post-template) .post-title {
         padding: 10% 0;
     }
 
-    .main-nav {
-        padding: 5px;
-        margin-bottom: 2rem;
-    }
-
     .blog-logo {
         padding: 5px;
     }
@@ -1999,10 +2042,6 @@ body:not(.post-template) .post-title {
     p, ul, ol, dl {
         font-size: 0.95em;
         margin: 0 0 2.5rem 0;
-    }
-
-    .page-title {
-        font-size: 3rem;
     }
 
     .post-excerpt p {

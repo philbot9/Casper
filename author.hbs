@@ -5,13 +5,31 @@
 
 {{!-- Everything inside the #author tags pulls data from the author --}}
 {{#author}}
-    <header class="main-header author-head {{#if cover}}" style="background-image: url({{cover}}){{else}}no-cover{{/if}}">
-        <nav class="main-nav overlay clearfix">
-            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-            {{#if @blog.navigation}}
-                <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-            {{/if}}
-        </nav>
+    <header class="main-header author-head {{#unless cover}}no-cover{{/unless}}">
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <h1 class="page-title">
+                  <a href="/">
+                    {{@blog.title}}
+                  </a>
+                </h1>
+            </div>
+            <nav class="main-nav nav-right">
+                <!-- {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}} -->
+                {{#if @blog.navigation}}
+                    <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+                {{/if}}
+            </nav>
+        </div>
+
+        {{#if cover}}
+        <div class="header-cover" style="background-image: url({{cover}})">
+          &nbsp;
+        </div>
+        {{/if}}
+
+        {{!--<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>--}}
+
     </header>
 
     <section class="author-profile inner">
