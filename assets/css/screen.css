@@ -1786,6 +1786,13 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 @media only screen and (max-width: 900px) {
+    .top-bar-content {
+      margin-left: 0.5em;
+    }
+
+    .nav-right {
+      margin-rigth: 0.5em;
+    }
 
     blockquote {
         margin-left: 0;
@@ -1811,10 +1818,6 @@ body:not(.post-template) .post-title {
 
     .blog-logo img {
         padding: 4px 0;
-    }
-
-    .page-title {
-        letter-spacing: -1px;
     }
 
     .page-description {
@@ -1935,6 +1938,24 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 @media only screen and (max-width: 500px) {
+    .page-title {
+        font-size: 2rem;
+        font-weight: 600;
+        padding: 0.9em;
+        padding-left: 0.8em;
+    }
+
+    .top-bar-content {
+        margin-left: 0;
+    }
+
+    .nav-right {
+        margin-right: 0.5em;
+    }
+
+    .post-title {
+      font-size: 3rem;
+    }
 
     .main-header {
         margin-bottom: 15px;
