@@ -5,7 +5,7 @@
 
 {{!-- Everything inside the #author tags pulls data from the author --}}
 {{#author}}
-    <header class="main-header author-head {{#unless cover}}no-cover{{/unless}}">
+    <header class="main-header author-head {{#unless @blog.cover_image}}no-cover{{/unless}}">
         <div class="top-bar">
             <div class="top-bar-content">
                 <h1 class="page-title">
@@ -22,8 +22,8 @@
             </nav>
         </div>
 
-        {{#if cover}}
-        <div class="header-cover" style="background-image: url({{cover}})">
+        {{#if @blog.cover_image}}
+        <div class="header-cover" style="background-image: url({{@blog.cover_image}})">
           &nbsp;
         </div>
         {{/if}}
@@ -33,9 +33,9 @@
     </header>
 
     <section class="author-profile inner">
-        {{#if image}}
+        {{#if profile_image}}
         <figure class="author-image">
-            <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
+            <div class="img" style="background-image: url({{profile_image}})"><span class="hidden">{{name}}'s Picture</span></div>
         </figure>
         {{/if}}
         <h1 class="author-title">{{name}}</h1>
